@@ -23,7 +23,6 @@ env:
   RUSTUP_MAX_RETRIES: 10
 
 jobs:
-
   # =============================================================
   # Linux x86_64 (glibc)
   # 変更: github-ubuntu-24.04-x86_64-8 → ubuntu-24.04
@@ -172,7 +171,7 @@ jobs:
   build-binary-macos-aarch64:
     name: "macos aarch64"
     timeout-minutes: 30
-    runs-on: macos-14  # ← オリジナルのまま。すでに標準ランナー
+    runs-on: macos-14 # ← オリジナルのまま。すでに標準ランナー
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
@@ -200,7 +199,7 @@ jobs:
   build-binary-macos-x86_64:
     name: "macos x86_64"
     timeout-minutes: 30
-    runs-on: macos-13  # 変更: macos-latest-large → macos-13
+    runs-on: macos-13 # 変更: macos-latest-large → macos-13
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
